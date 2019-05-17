@@ -1,0 +1,47 @@
+@media (min-width:801px) {
+    .dropdown-menu {
+        width: 25vw;
+    }
+}
+
+@media (min-width:1025px) {
+    header:hover .dropdown-menu {display: flex;}
+
+    .dropdown-menu {
+        width: 100%;
+        height: auto;
+        display: none;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        z-index: auto;
+        position: sticky;
+    }
+
+    #burger {
+        display: none;
+    }
+
+    h1 {
+        display: inline;
+    }
+
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    .dashboard-content {
+        display: grid;
+        grid-template-rows: auto auto;
+        grid-template-columns: 1fr 1fr;
+        margin: 0;
+        width: 100vw;
+        min-width: none;
+        max-width: none;
+    }
+
+    .charts {
+        width: 45vw;
+        margin: 2rem auto;
+    }
+}

@@ -1,0 +1,149 @@
+/*For the charts*/
+
+.charts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 900px;
+    background: #fff;
+    margin-bottom: 1rem;
+    padding: 1.5rem;
+    box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),
+    -30px 0px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+.charts:nth-of-type(1) h2{
+  color: lightseagreen;
+}
+.charts:nth-of-type(1) p{
+  color: darkgray;
+}
+
+.charts:nth-of-type(2) h2{
+  color: cornflowerblue;
+}
+.charts:nth-of-type(2) p{
+  color: darkgray;
+}
+
+.charts:nth-of-type(3) h2{
+  color: palevioletred;
+}
+.charts:nth-of-type(3) p{
+  color: darkgray;
+}
+
+.charts:nth-of-type(4) h2{
+  color: #333;
+}
+.charts:nth-of-type(4) p{
+  color: darkgray;
+}
+
+.progress-bar {
+   font-size: 1.3rem;
+   margin: 1.3rem;
+   position: relative;
+   padding: 0;
+   width: 5rem;
+   height: 5rem;
+   background-color: #F2E9E1; 
+   border-radius: 50%;
+   line-height: 5rem;
+}
+
+.progress-bar:after{
+    border: none;
+    position: absolute;
+    top: 0.35rem;
+    left: 0.35rem;
+    text-align: center;
+    display: block;
+    border-radius: 50%;
+    width: 4.3rem;
+    height: 4.3rem;
+    background-color: white;
+    content: " ";
+}
+
+.progress-bar span {
+    position: absolute;
+    line-height: 5rem;
+    width: 5rem;
+    text-align: center;
+    display: block;
+    color: #333;
+    z-index: 2;
+}
+.clip-left { 
+   border-radius: 50%;
+   width: 5rem;
+   height: 5rem;
+   position: absolute;
+   clip: rect(0, 5rem, 5rem, 2.5rem);
+}
+
+.progress-bar.over50 .clip-left {
+   clip: rect(auto,auto,auto,auto);
+}
+.value-bar {
+   position: absolute;
+   clip: rect(0, 2.5rem, 5rem, 0);
+   width: 5rem;
+   height: 5rem;
+   border-radius: 50%;
+   border: 0.45rem solid darkgray;
+   box-sizing: border-box;
+  
+}
+/*For 50% +*/
+.progress-bar.over50 .sub50-bar {
+   position: absolute;
+   clip: rect(0, 5rem, 5rem, 2.5rem);
+   background-color: darkgray;
+   border-radius: 50%;
+   width: 5rem;
+   height: 5rem;
+}
+.progress-bar:not(.over50) .sub50-bar{ display: none; }
+
+/*.progress-circle.p1 .value-bar { transform: rotate(4deg); }*/
+
+.progress-bar.p35 .value-bar { 
+  transform: rotate(126deg);
+  border: 0.45rem solid lightseagreen;
+}
+.progress-bar.p35 span{
+  color: lightseagreen;
+}
+
+.progress-bar.p49 .value-bar { 
+  transform: rotate(176deg);
+}/*standart*/
+
+.progress-bar.p58 .value-bar { 
+  transform: rotate(209deg);
+  border: 0.45rem solid palevioletred;
+}
+.progress-bar.over50.p58 .sub50-bar {
+  background-color: palevioletred;
+}
+.progress-bar.p58 span{
+  color: palevioletred;
+}
+
+.progress-bar.p75 .value-bar {
+  transform: rotate(270deg);
+  border: 0.45rem solid cornflowerblue;
+}
+.progress-bar.over50.p75 .sub50-bar {
+  background-color: cornflowerblue;
+}
+.progress-bar.p75 span{
+  color: cornflowerblue;
+}
+
+/*.progress-circle.p100 .value-bar { transform: rotate(360deg); }*/
+
